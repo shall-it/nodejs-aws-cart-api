@@ -59,8 +59,8 @@ export class CartService {
     return { ...updatedCart };
   }
 
-  removeByUserId(userId): void {
-    this.userCarts[userId] = null;
+  removeByUserId(userId: string): void {
+    delete this.userCarts[userId];
   }
 
 }
