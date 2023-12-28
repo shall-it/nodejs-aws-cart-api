@@ -30,7 +30,7 @@ export class CartController {
   // @UseGuards(JwtAuthGuard)
   // @UseGuards(BasicAuthGuard)
   @Put()
-  updateUserCart(@Req() req: AppRequest, @Body() body) { // TODO: validate body payload...
+  updateUserCart(@Req() req: AppRequest, @Body() body: any) { // TODO: validate body payload...
     const cart = this.cartService.updateByUserId(getUserIdFromRequest(req), body)
 
     return {
@@ -58,7 +58,7 @@ export class CartController {
   // @UseGuards(JwtAuthGuard)
   // @UseGuards(BasicAuthGuard)
   @Post('checkout')
-  checkout(@Req() req: AppRequest, @Body() body) {
+  checkout(@Req() req: AppRequest, @Body() body: any) {
     const userId = getUserIdFromRequest(req);
     const cart = this.cartService.findByUserId(userId);
 
