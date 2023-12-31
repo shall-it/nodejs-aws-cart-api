@@ -23,10 +23,11 @@
     "cdk": "cdk",
     "cdk:bootstrap": "npx cdk bootstrap",
     "deploy": "npm run cdk deploy",
-    "destroy": "npm run cdk destroy"
+    "destroy": "npm run cdk destroy",
+    "lint:docker": "docker run --rm -i hadolint/hadolint < Dockerfile",
+    "build:docker": "docker build -t cartapi --progress=plain --no-cache ."
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.110.0-alpha.0",
     "@nestjs/common": "^10.0.3",
     "@nestjs/config": "^3.0.0",
     "@nestjs/core": "^10.0.3",

@@ -1,0 +1,10 @@
+/node_modules
+/test
+/cdk.out
+cdk.*
+Dockerfile
+.dockerignore
+.git*
+.npmignore
+
+
