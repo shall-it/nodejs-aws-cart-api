@@ -24,8 +24,9 @@
     "cdk:bootstrap": "npx cdk bootstrap",
     "deploy": "npm run cdk deploy",
     "destroy": "npm run cdk destroy",
-    "lint:docker": "docker run --rm -i hadolint/hadolint < Dockerfile",
-    "build:docker": "docker build -t cartapi --progress=plain --no-cache ."
+    "lintd": "docker run --rm -i hadolint/hadolint < Dockerfile",
+    "buildd": "docker build -t cartapi --progress=plain --no-cache .",
+    "lintbuild": "npm run lintd && npm run buildd"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.3",
