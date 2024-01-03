@@ -73,15 +73,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
-
-
-## Explanation for .dockerignore
-
-/node_modules - consists of npm dependencies, shouldn't be copied due to npm install command in Dockerfile
-/test - just for test purposes
-/cdk.out - directory for output files for cdk deploy process, shouldn't be copied to image
-cdk.* - files for cdk deploy process, shouldn't be copied to image
-Dockerfile - shouldn't be in docker image as file for dockerization
-.dockerignore - shouldn't be in docker image as file for dockerization
-.git* - shouldn't be in docker image as files for git
-.npmignore - shouldn't be in docker image as files for npm
